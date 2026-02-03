@@ -1,49 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hi ❤️</title>
+  <title>Hi Senam ❤️</title>
   <style>
-    body {
-      background: pink;
-      text-align: center;
-      margin-top: 150px;
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      color: #c2185b;
-    }
-    button {
-      padding: 14px 32px;
-      margin: 10px;
-      font-size: 18px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      color: white;
-    }
-    #yesBtn {
-      background: #e91e63;
-    }
-    #yesBtn:hover {
-      background: #c2185b;
-    }
-    #noBtn {
-      background: #757575;
-    }
-    #noBtn:hover {
-      background: #616161;
-    }
-    #msg {
-      margin-top: 40px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #880e4f;
-    }
+    body { background: linear-gradient(to bottom, #ffcccb, #ffb6c1); text-align: center; margin-top: 60px; font-family: Arial, sans-serif; }
+    h1 { color: #c2185b; font-size: 2.8em; margin-bottom: 20px; }
+    img.bunny { max-width: 320px; margin: 20px auto; border-radius: 25px; box-shadow: 0 10px 20px rgba(200, 24, 91, 0.3); border: 4px solid #fff; }
+    button { padding: 16px 50px; margin: 15px; font-size: 1.5em; border: none; border-radius: 50px; cursor: pointer; color: white; transition: all 0.3s; }
+    #yesBtn { background: #e91e63; }
+    #yesBtn:hover { background: #c2185b; transform: scale(1.1); }
+    #noBtn { background: #757575; }
+    #noBtn:hover { background: #616161; }
+    #msg { margin-top: 40px; font-size: 2.2em; font-weight: bold; color: #880e4f; min-height: 100px; }
   </style>
 </head>
 <body>
 
-  <h1>Will you be my Valentine, Senam? ❤️</h1>
+  <img src="cute-bunny-valentine.png" alt="Cute bunny with rose and food" class="bunny">
+
+  <h1>Will you be my Valentine, Senam? 🌹🍲🐰</h1>
   
   <button id="yesBtn" onclick="answer('yes')">Yes 💖</button>
   <button id="noBtn" onclick="answer('no')">No 😔</button>
@@ -53,16 +28,13 @@
   <script>
     function answer(choice) {
       const msg = document.getElementById("msg");
-      
       if (choice === 'yes') {
-        msg.innerHTML = "You just made my heart very happy 💖";
+        msg.innerHTML = "You just made my heart very happy 💖✨";
         msg.style.color = "#d81b60";
       } else {
-        msg.innerHTML = "Thank you";
+        msg.innerHTML = "Thank you 😌";
         msg.style.color = "#424242";
       }
-      
-      // Optional: disable buttons after click
       document.getElementById("yesBtn").disabled = true;
       document.getElementById("noBtn").disabled = true;
     }
