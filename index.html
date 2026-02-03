@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hi ❤️</title>
+  <style>
+    body {
+      background: pink;
+      text-align: center;
+      margin-top: 150px;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: #c2185b;
+    }
+    button {
+      padding: 14px 32px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      color: white;
+    }
+    #yesBtn {
+      background: #e91e63;
+    }
+    #yesBtn:hover {
+      background: #c2185b;
+    }
+    #noBtn {
+      background: #757575;
+    }
+    #noBtn:hover {
+      background: #616161;
+    }
+    #msg {
+      margin-top: 40px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #880e4f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will you be my Valentine, Senam? ❤️</h1>
+  
+  <button id="yesBtn" onclick="answer('yes')">Yes 💖</button>
+  <button id="noBtn" onclick="answer('no')">No 😔</button>
+  
+  <p id="msg"></p>
+
+  <script>
+    function answer(choice) {
+      const msg = document.getElementById("msg");
+      
+      if (choice === 'yes') {
+        msg.innerHTML = "You just made my heart very happy 💖";
+        msg.style.color = "#d81b60";
+      } else {
+        msg.innerHTML = "Thank you";
+        msg.style.color = "#424242";
+      }
+      
+      // Optional: disable buttons after click
+      document.getElementById("yesBtn").disabled = true;
+      document.getElementById("noBtn").disabled = true;
+    }
+  </script>
+
+</body>
+</html>
